@@ -8,6 +8,25 @@ body {
     font-family: Helvetica, sans-serif;
 }
 
+
+
+/* Index page container*/
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    resize: both;
+    overflow: auto;
+}
+
+main div {
+    width: 50%;
+    padding: 20px;
+    resize: both;
+    overflow: auto;
+}
+
 /* The actual timeline (the vertical ruler) */
 .timeline {
     position: relative;
