@@ -5,26 +5,23 @@
 /* Set a background color */
 body {
     background-color: #8d6b94;
-    font-family: Helvetica, sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 
 
-/* Index page container*/
+/* Index page container */
 main {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: column wrap;
-    resize: both;
-    overflow: auto;
 }
 
 main div {
-    width: 50%;
+    width: 90%;
     padding: 20px;
-    resize: both;
-    overflow: auto;
+    flex: 1;
 }
 
 /* The actual timeline (the vertical ruler) */
