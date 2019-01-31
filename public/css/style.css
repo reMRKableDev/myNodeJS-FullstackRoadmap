@@ -4,11 +4,42 @@
 
 /* Set a background color */
 body {
-    background-color: #8d6b94;
     font-family: 'Ubuntu', sans-serif;
 }
 
+/* Site's color-palette for backgrounds */
+.purple {
+    background-color: #8d6b94;
+}
 
+.ivory {
+    background-color: #fffff0;
+}
+
+.orange {
+    background-color: #f67c5a;
+}
+
+.yellow {
+    background-color: #f3de8a;
+}
+
+/* Site's color-palette for backgrounds */
+.purple_font {
+    color: #8d6b94;
+}
+
+.ivory_font {
+    color: #fffff0;
+}
+
+.orange_font {
+    color: #f67c5a;
+}
+
+.yellow_font {
+    color: #f3de8a;
+}
 
 /* Index page container */
 main {
@@ -22,6 +53,11 @@ main div {
     width: 90%;
     padding: 20px;
     flex: 1;
+}
+
+/* Remove all underlines from link tags*/
+a {
+    text-decoration: none;
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -43,6 +79,16 @@ main div {
     margin-left: -3px;
 }
 
+/* Link coloring */
+.timeline a {
+    color: #8d6b94;
+}
+
+.timeline a:hover {
+    color: #f67c5a;
+}
+
+
 /* Container around content */
 .container {
     padding: 10px 40px;
@@ -58,8 +104,8 @@ main div {
     width: 25px;
     height: 25px;
     right: -17px;
-    background-color: #f3de8a;
-    border: 4px solid #f67c5a;
+    background-color: #f67c5a;
+    border: 4px solid #8d6b94;
     top: 15px;
     border-radius: 50%;
     z-index: 1;
@@ -134,25 +180,23 @@ main div {
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
     font-size: 17px;
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
     background-color: #f67c5a;
-    color: black;
-}
-
-/* Add an active class to highlight the current page */
-.active {
-    background-color: #f67c5a;
-    color: #f3de8a;
+    text-decoration: underline;
 }
 
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
     display: none;
+}
+
+/* Underlining */
+.underline {
+    text-decoration: underline;
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
