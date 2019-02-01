@@ -103,7 +103,6 @@ a {
 
 .button:hover {
     background-color: #f65a5f;
-    text-decoration: underline;
 }
 
 .button:active {
@@ -158,6 +157,8 @@ a {
     border: medium solid #fffff0;
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent #fffff0;
+    box-shadow: 0 8px 6px -6px black;
+
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -172,6 +173,7 @@ a {
     border: medium solid #fffff0;
     border-width: 10px 10px 10px 0;
     border-color: transparent #fffff0 transparent transparent;
+    box-shadow: 0 8px 6px -6px black;
 }
 
 /* Fix the circle for containers on the right side */
@@ -185,6 +187,8 @@ a {
     background-color: #fffff0;
     position: relative;
     border-radius: 6px;
+    box-shadow: 0 8px 16px -6px black;
+
 }
 
 /* Text alignment */
