@@ -80,13 +80,36 @@ a {
     margin-left: -3px;
 }
 
-/* Link coloring */
-.timeline a {
-    color: #8d6b94;
+/* Button customization*/
+.buttons_container {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: center;
 }
 
-.timeline a:hover {
-    color: #f67c5a;
+.button {
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #8d6b94;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px #999;
+    margin: 1em;
+}
+
+.button:hover {
+    background-color: #f65a5f;
+    text-decoration: underline;
+}
+
+.button:active {
+    background-color: #f67c5a;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 
@@ -110,6 +133,7 @@ a {
     top: 15px;
     border-radius: 50%;
     z-index: 1;
+    box-shadow: 0 8px 6px -6px black;
 }
 
 /* Place the container to the left */
@@ -213,6 +237,10 @@ a {
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
 
+    .button {
+        margin: 1em;
+    }
+
     /* Place the timelime to the left */
     .timeline::after {
         left: 31px;
@@ -246,7 +274,7 @@ a {
 
     /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 
-    .topnav a:not(:first-child) {
+    .topnav a {
         display: none;
     }
 
