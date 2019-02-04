@@ -260,6 +260,25 @@ a {
     text-align: center;
 }
 
+/* Columns */
+.flex_row {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+}
+
+.flex_column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.col {
+    padding: 1em;
+    margin: 0 2px 2px 0;
+}
+
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
 
@@ -327,7 +346,13 @@ a {
         text-align: left;
     }
 
+    /* Hero */
     .hero_title {
         font-size: 5vh;
+    }
+
+    /* Column*/
+    .flex_column {
+        flex: 1;
     }
 }
