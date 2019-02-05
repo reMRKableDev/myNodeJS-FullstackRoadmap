@@ -260,23 +260,23 @@ a {
     text-align: center;
 }
 
-/* Columns */
-.flex_row {
-    display: flex;
-    flex-flow: row wrap;
-    width: 100%;
+/* Float 2 columns side by side */
+.column {
+    float: left;
+    width: 50%;
+    padding: 0 10px;
 }
 
-.flex_column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
+/* Remove extra left and right margins, due to padding */
+.row {
+    margin: 0 -5px;
 }
 
-.col {
-    padding: 1em;
-    margin: 0 2px 2px 0;
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
@@ -352,7 +352,9 @@ a {
     }
 
     /* Column*/
-    .flex_column {
-        flex: 1;
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
     }
 }
