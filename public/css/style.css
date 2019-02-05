@@ -260,6 +260,25 @@ a {
     text-align: center;
 }
 
+/* Float 2 columns side by side */
+.column {
+    float: left;
+    width: 50%;
+    padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+    margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
 
@@ -327,7 +346,15 @@ a {
         text-align: left;
     }
 
+    /* Hero */
     .hero_title {
         font-size: 5vh;
+    }
+
+    /* Column*/
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
     }
 }
