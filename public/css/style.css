@@ -98,7 +98,7 @@ a {
   margin: 1em;
 }
 .button:hover {
-  background-color: #f66f5a;
+  background-color: #f67c5a;
 }
 .button:active {
   background-color: #f67c5a;
@@ -124,7 +124,7 @@ a {
   top: 15px;
   border-radius: 50%;
   z-index: 1;
-  box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px #000;
 }
 
 /* Place the container to the left */
@@ -142,7 +142,7 @@ a {
   border: medium solid #fffff0;
   border-width: 10px 0 10px 10px;
   border-color: transparent transparent transparent #fffff0;
-  box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px #000;
 }
 
 /* Add arrows to the left container (pointing right) */
@@ -161,7 +161,7 @@ a {
   border: medium solid #fffff0;
   border-width: 10px 10px 10px 0;
   border-color: transparent #fffff0 transparent transparent;
-  box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px #000;
 }
 .right::after {
   left: -16px;
@@ -175,7 +175,7 @@ a {
   background-color: #fffff0;
   position: relative;
   border-radius: 6px;
-  box-shadow: 0 8px 16px -6px black;
+  box-shadow: 0 8px 16px -6px #000;
 }
 
 /* Text alignment */
@@ -208,7 +208,7 @@ a {
 .topnav a:hover {
   background-color: #f67c5a;
   text-decoration: underline;
-  box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px #000;
 }
 .topnav .icon {
   display: none;
