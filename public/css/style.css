@@ -1,360 +1,340 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Set a background color */
 body {
-    font-family: 'Ubuntu', sans-serif;
-    margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
 }
 
 /* Site's color-palette for backgrounds */
 .purple {
-    background-color: #8d6b94;
+  background-color: #8d6b94;
 }
 
 .ivory {
-    background-color: #fffff0;
+  background-color: #fffff0;
 }
 
 .orange {
-    background-color: #f67c5a;
+  background-color: #f67c5a;
 }
 
 .yellow {
-    background-color: #f3de8a;
+  background-color: #f3de8a;
 }
 
 /* Site's color-palette for backgrounds */
 .purple_font {
-    color: #8d6b94;
+  color: #8d6b94;
 }
 
 .ivory_font {
-    color: #fffff0;
+  color: #fffff0;
 }
 
 .orange_font {
-    color: #f67c5a;
+  color: #f67c5a;
 }
 
 .yellow_font {
-    color: #f3de8a;
+  color: #f3de8a;
 }
 
 /* Index page container */
 main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
 }
-
 main section {
-    width: 90%;
-    padding: 20px;
-    flex: 1;
+  width: 90%;
+  padding: 20px;
+  flex: 1;
 }
 
 /* Remove all underlines from link tags*/
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* The actual timeline (the vertical ruler) */
 .timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-
-/* The actual timeline (the vertical ruler) */
 .timeline::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    background-color: #fffff0;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #fffff0;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
 }
 
 /* Button customization*/
 .buttons_container {
-    display: flex;
-    flex-flow: row wrap;
-    align-content: center;
-    justify-content: center;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: center;
 }
 
 .button {
-    padding: 10px 20px;
-    text-align: center;
-    cursor: pointer;
-    outline: none;
-    color: #fff;
-    background-color: #8d6b94;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 5px #999;
-    margin: 1em;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #8d6b94;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px #999;
+  margin: 1em;
 }
-
 .button:hover {
-    background-color: #f66f5a;
+  background-color: #f66f5a;
 }
-
 .button:active {
-    background-color: #f67c5a;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+  background-color: #f67c5a;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
-
 
 /* Container around content */
 .container {
-    padding: 10px 40px;
-    position: relative;
-    background-color: inherit;
-    width: 50%;
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
 }
-
-/* The circles on the timeline */
 .container::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -17px;
-    background-color: #f67c5a;
-    border: 4px solid #8d6b94;
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-    box-shadow: 0 8px 6px -6px black;
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #f67c5a;
+  border: 4px solid #8d6b94;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: 0 8px 6px -6px black;
 }
 
 /* Place the container to the left */
 .left {
-    left: 0;
+  left: 0;
 }
-
-/* Place the container to the right */
-.right {
-    left: 50%;
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #fffff0;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #fffff0;
+  box-shadow: 0 8px 6px -6px black;
 }
 
 /* Add arrows to the left container (pointing right) */
-.left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid #fffff0;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent #fffff0;
-    box-shadow: 0 8px 6px -6px black;
-
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #fffff0;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #fffff0 transparent transparent;
+  box-shadow: 0 8px 6px -6px black;
+}
+.right::after {
+  left: -16px;
 }
 
 /* Add arrows to the right container (pointing left) */
-.right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid #fffff0;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent #fffff0 transparent transparent;
-    box-shadow: 0 8px 6px -6px black;
-}
-
 /* Fix the circle for containers on the right side */
-.right::after {
-    left: -16px;
-}
-
 /* The actual content */
 .content {
-    padding: 20px 30px;
-    background-color: #fffff0;
-    position: relative;
-    border-radius: 6px;
-    box-shadow: 0 8px 16px -6px black;
-
+  padding: 20px 30px;
+  background-color: #fffff0;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 0 8px 16px -6px black;
 }
 
 /* Text alignment */
 .align_center {
-    text-align: center;
+  text-align: center;
 }
 
 /* Add a black background color to the top navigation and make stick to navbar */
 .topnav {
-    background-color: #333;
-    padding: 1em;
-    height: auto;
-    width: 100%;
-    position: sticky;
-    top: 0;
-    border-bottom: 1px solid #eee;
-    box-shadow: 1px 2px 18px 0px #d2d2d2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
+  background-color: #333;
+  padding: 1em;
+  height: auto;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #eee;
+  box-shadow: 1px 2px 18px 0px #d2d2d2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.topnav a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color: #f67c5a;
+  text-decoration: underline;
+  box-shadow: 0 8px 6px -6px black;
+}
+.topnav .icon {
+  display: none;
 }
 
 /* Style the links inside the navigation bar */
-.topnav a {
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    font-size: 17px;
-}
-
 /* Change the color of links on hover */
-.topnav a:hover {
-    background-color: #f67c5a;
-    text-decoration: underline;
-    box-shadow: 0 8px 6px -6px black;
-}
-
 /* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-    display: none;
-}
-
 /* Underlining */
 .underline {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Hero properties */
 .hero {
-    height: 100vh;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: row wrap;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
 }
 
 .hero_title {
-    max-width: 16em;
-    margin: 0;
-    font-size: 10vh;
-    font-weight: bold;
-    line-height: 1;
-    text-align: center;
+  max-width: 16em;
+  margin: 0;
+  font-size: 10vh;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
 }
 
 /* Float 2 columns side by side */
 .column {
-    float: left;
-    width: 50%;
-    padding: 0 10px;
+  float: left;
+  width: 50%;
+  padding: 0 10px;
 }
 
 /* Remove extra left and right margins, due to padding */
 .row {
-    margin: 0 -5px;
+  margin: 0 -5px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
+  .button {
+    margin: 1em;
+  }
 
-    .button {
-        margin: 1em;
-    }
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
 
-    /* Place the timelime to the left */
-    .timeline::after {
-        left: 31px;
-    }
+  /* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  .container::before {
+    left: 60px;
+    border: medium solid #fffff0;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #fffff0 transparent transparent;
+  }
 
-    /* Full-width containers */
-    .container {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
+  /* Make sure that all arrows are pointing leftwards */
+  /* Make sure all circles are at the same spot */
+  .left::after {
+    left: 15px;
+  }
 
-    /* Make sure that all arrows are pointing leftwards */
-    .container::before {
-        left: 60px;
-        border: medium solid #fffff0;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent #fffff0 transparent transparent;
-    }
+  .right {
+    left: 0%;
+  }
+  .right::after {
+    left: 15px;
+  }
 
-    /* Make sure all circles are at the same spot */
-    .left::after,
-    .right::after {
-        left: 15px;
-    }
+  /* Make all right containers behave like the left ones */
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+  .topnav a {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 
-    /* Make all right containers behave like the left ones */
-    .right {
-        left: 0%;
-    }
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  /* Hero */
+  .hero_title {
+    font-size: 5vh;
+  }
 
-    /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-
-    .topnav a {
-        display: none;
-    }
-
-    .topnav a.icon {
-        float: right;
-        display: block;
-    }
-
-    /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-
-    .topnav.responsive {
-        position: relative;
-    }
-
-    .topnav.responsive a.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-
-    .topnav.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-
-    /* Hero */
-    .hero_title {
-        font-size: 5vh;
-    }
-
-    /* Column*/
-    .column {
-        width: 100%;
-        display: block;
-        margin-bottom: 20px;
-    }
+  /* Column*/
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
 }
+/*# sourceMappingURL=style.css.map */
+
+/*# sourceMappingURL=style.css.map */
