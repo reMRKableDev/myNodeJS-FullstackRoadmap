@@ -1,5 +1,3 @@
-
-
 const indexController = require("../index");
 const { mockRequest, mockResponse } = require("../../utils/interceptor");
 const {

@@ -1,3 +1,6 @@
+/** Route controllers
+ * 
+ */
 module.exports = {
   getLandingPage: (req, res) => {
     res.status(200).render("index");

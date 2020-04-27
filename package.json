@@ -9,6 +9,8 @@
     "test": "jest --coverage --watchAll=false"
   },
   "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
     "collectCoverageFrom": [
       "*.js",
       "controllers/*.js",
@@ -27,8 +29,8 @@
   "author": "Malcolm R. Kente",
   "license": "ISC",
   "dependencies": {
-    "ejs": "^2.6.1",
-    "express": "^4.16.4",
+    "ejs": "^3.1.2",
+    "express": "^4.17.1",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
