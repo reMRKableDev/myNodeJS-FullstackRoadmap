@@ -1,17 +1,17 @@
 {
-    "name": "fullstack-roadmap",
-    "version": "1.0.0",
-    "description": "A roadmap to what is needed for being a fullstack developer",
-    "main": "app.js",
-    "scripts": {
-        "start": "node app.js",
-        "dev": "nodemon app.js",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "Malcolm Kente",
-    "license": "ISC",
-    "dependencies": {
-        "ejs": "^2.6.1",
-        "express": "^4.16.4"
-    }
+  "name": "fullstack-roadmap",
+  "version": "1.0.0",
+  "description": "A roadmap to what is needed for being a fullstack developer",
+  "main": "app.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Malcolm Kente",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
 }

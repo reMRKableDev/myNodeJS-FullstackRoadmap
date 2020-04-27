@@ -16,4 +16,4 @@ app.use("/", indexRouter);
 app.use("/frontend", frontendRouter);
 app.use("/backend", backendRouter);
 
-app.listen(port, () => console.log("Ears up on port 3000"));
+module.exports = app;
