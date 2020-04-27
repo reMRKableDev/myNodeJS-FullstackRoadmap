@@ -1,8 +1,10 @@
+
+
 const indexController = require("../index");
 const { mockRequest, mockResponse } = require("../../utils/interceptor");
 const {
   validateTruthiness,
-  validateStatusOK,
+  validateToHaveBeenCalledWithOK,
   validateRenderIndexPage,
   validateRenderFrontendPage,
   validateRenderBackendPage,
@@ -25,7 +27,7 @@ describe("Controller unit tests", () => {
 
   it("should return 200 status for landing page", async () => {
     await indexController.getLandingPage(req, res);
-    validateStatusOK(res.status);
+    validateToHaveBeenCalledWithOK(res.status);
   });
 
   it("should call .render('index') for landing page", async () => {

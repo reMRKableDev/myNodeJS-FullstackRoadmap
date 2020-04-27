@@ -12,4 +12,10 @@ module.exports = {
     res.render = jest.fn().mockReturnValue(res);
     return res;
   },
+
+  mockServer: () => {
+    const server = {};
+    server.listen = jest.fn();
+    return server;
+  },
 };
