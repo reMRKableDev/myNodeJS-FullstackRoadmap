@@ -1,28 +1,19 @@
-const express = require('express'),
-    path = require('path'),
-    port = process.env.PORT || 3000,
-    app = express();
+const express = require("express");
+const path = require("path");
+const port = process.env.PORT || 3000;
+const app = express();
 
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
+const indexRouter = require("./routes/");
+const frontendRouter = require("./routes/frontend");
+const backendRouter = require("./routes/backend");
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
 
-// Rendering ejs files to site.
-app.get('/', (req, res) => {
-    res.render('index');
-});
+app.use(express.static(path.join(__dirname, "public")));
 
-app.get('/frontend', (req, res) => {
-    res.render('frontend');
-});
+app.use("/", indexRouter);
+app.use("/frontend", frontendRouter);
+app.use("/backend", backendRouter);
 
-app.get('/backend', (req, res) => {
-    res.render('backend');
-});
-
-app.post('/users/add', (req, res) => {
-    console.log('FORM SUBMITTED');
-});
-
-app.listen(port, () => console.log('Ears up on port 3000'));
+app.listen(port, () => console.log("Ears up on port 3000"));
