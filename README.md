@@ -1,4 +1,5 @@
 # A Roadmap to becoming a Fullstack web developer
+[![codecov](https://codecov.io/gh/reMRKableDev/FullstackDevRoadmap/branch/master/graph/badge.svg)](https://codecov.io/gh/reMRKableDev/FullstackDevRoadmap) ![build](https://github.com/reMRKableDev/FullstackDevRoadmap/workflows/build/badge.svg)
 
 A web application made with Node.js and EJS.
 
